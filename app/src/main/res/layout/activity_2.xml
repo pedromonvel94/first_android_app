@@ -16,8 +16,8 @@
         style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GEEKSFORGEEKS"
-        android:textColor="#00FF00" />
+        android:text="Pantalla receptora"
+        android:textColor="@color/green_500" />
 
     <!--TextView2 widget inside ViewGroup1-->
     <TextView
@@ -32,37 +32,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--ViewGroup2-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:clipToPadding="false">
 
-        <!--EditText1 widget inside ViewGroup2-->
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter first name"
-            android:inputType="text" />
+        <!-- Verde -->
 
-        <!--EditText2 widget inside ViewGroup2-->
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText1"
-            android:hint="Enter last name"
-            android:inputType="text" />
+        <!-- Rojo -->
 
-        <!--Button widget inside ViewGroup2-->
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText2"
-            android:layout_alignParentEnd="true"
-            android:text="Submit" />
+    </RelativeLayout>
 
-    </RelativeLayout><!--End of ViewGroup2-->
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0196AF"
+        android:text="Aceptar" />
+
+    <Button
+        android:id="@+id/btnRechazar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F44336"
+        android:text="Rechazar" />
+
+    <!--End of ViewGroup2-->
 
 </LinearLayout><!--End of ViewGroup1-->
