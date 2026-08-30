@@ -17,7 +17,7 @@
         style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GEEKSFORGEEKS"
+        android:text="ACTIVIDAD 2 - CONEXIÓN DE PANTALLAS"
         android:textColor="@color/green_500" />
 
     <!--TextView2 widget inside ViewGroup1-->
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Enter the user information"
+        android:text="Escriba el mensaje a enviar a la otra pantalla:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -44,26 +44,30 @@
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter first name"
+            android:hint="Ingrese texto aquí..."
             android:inputType="text" />
 
-        <!--EditText2 widget inside ViewGroup2-->
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editText1"
-            android:hint="Enter last name"
-            android:inputType="text" />
 
         <!--Button widget inside ViewGroup2-->
+        <!--Se tiene que agregar un id para que sea detectado y poder hacer cosas -->
         <Button
+            android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/editText2"
+            android:layout_below="@id/editText1"
             android:layout_alignParentEnd="true"
             android:text="Send" />
 
-    </RelativeLayout><!--End of ViewGroup2-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Esperando respuesta..."
+        android:textSize="18sp"
+        android:textStyle="bold" /><!--End of ViewGroup2-->
 
 </LinearLayout><!--End of ViewGroup1-->
