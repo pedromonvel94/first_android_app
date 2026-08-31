@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--ViewGroup1-->
 <LinearLayout
+    android:id="@+id/activity_2"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,28 +9,20 @@
     android:layout_height="match_parent"
     android:clipToPadding="false"
     android:orientation="vertical"
+    android:gravity="center_vertical"
     android:padding="24dp"
-    tools:context=".MainActivity">
+    tools:context=".DosActivity">
 
-    <!--TextView1 widget inside ViewGroup1-->
+    <!--TextView widget inside ViewGroup1-->
     <TextView
+        android:id="@+id/mainMessage"
         style="@style/TextAppearance.MaterialComponents.Headline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pantalla receptora"
-        android:textColor="@color/green_500" />
-
-    <!--TextView2 widget inside ViewGroup1-->
-    <TextView
-        style="@style/TextAppearance.MaterialComponents.Headline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Enter the user information"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text=""
+        android:textSize="26sp"
+        android:layout_gravity="center_horizontal" />
 
     <!--ViewGroup2-->
 
@@ -39,27 +32,43 @@
         android:layout_marginTop="8dp"
         android:clipToPadding="false">
 
-        <!-- Verde -->
+        <TextView
+            android:id="@+id/secondaryMessage"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="El texto recibido es correcto ?"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
 
-        <!-- Rojo -->
+        <!-- Contenedor para los botones -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondaryMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonIncorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Incorrect"
+                app:backgroundTint="@color/red"/>
+
+            <Button
+                android:id="@+id/buttonCorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Correct"
+                app:backgroundTint="@color/green_500"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnAceptar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#0196AF"
-        android:text="Aceptar" />
-
-    <Button
-        android:id="@+id/btnRechazar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#F44336"
-        android:text="Rechazar" />
-
-    <!--End of ViewGroup2-->
-
-</LinearLayout><!--End of ViewGroup1-->
+</LinearLayout>
