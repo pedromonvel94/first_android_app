@@ -51,19 +51,19 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/buttonCancel"
+                android:id="@+id/buttonIncorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Incorrecto"
+                android:text="Incorrect"
                 app:backgroundTint="@color/red"/>
 
             <Button
-                android:id="@+id/buttonSubmit"
+                android:id="@+id/buttonCorrect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Correcto"
+                android:text="Correct"
                 app:backgroundTint="@color/green_500"/>
 
         </LinearLayout>

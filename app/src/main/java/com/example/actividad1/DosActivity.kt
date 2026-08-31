@@ -1,6 +1,8 @@
 package com.example.actividad1
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +17,26 @@ class DosActivity: AppCompatActivity() { //
 
         val mainTextView = findViewById<TextView>(R.id.mainMessage) //Aqui creo la variable en la que almaceno el TextView principal
         val textReceived = intent.getStringExtra("UserText")?: "N/A" //Aqui obtengo y almaceno el texto que se envio desde la mainActivity con el "intent.putExtra("UserText", userText)"
+        val correctBtn = findViewById<Button>(R.id.buttonCorrect)
+        val incorrectBtn = findViewById<Button>(R.id.buttonIncorrect)
 
-        mainTextView.text = "Texto recibido: " + textReceived //El valor text de la etiqueta TextView lo modifico con el .text y colocandole el valor que quiero que se vea
+        correctBtn.setOnClickListener {
+            val intentRespuesta = Intent() //Este intent no abre una pantalla nueva, sino que sirve como si fuera un sobre que lo que hace es enviar datos de vuelta a donde se haya creado un registerForActivityResult
+            intentRespuesta.putExtra("SelectedOption", "Correct") //Este es el dato que envio directamente a la MainActivity
+            setResult(RESULT_OK, intentRespuesta) // Aquí se envía el dato y se dice que el proceso salió bien
+            finish()
+        }
+
+        incorrectBtn.setOnClickListener {
+            val intentRespuesta = Intent() //Este intent no abre una pantalla nueva, sino que sirve como si fuera un sobre que lo que hace es enviar datos de vuelta a donde se haya creado un registerForActivityResult
+            intentRespuesta.putExtra("SelectedOption", "Incorrect") //Este es el dato que envio directamente a la MainActivity
+            setResult(RESULT_OK, intentRespuesta) // Aquí se envía el dato y se dice que el proceso salió bien
+            finish()
+        }
+
+        mainTextView.text = "Texto recibido: $textReceived" //El valor text de la etiqueta TextView lo modifico con el .text y colocandole el valor que quiero que se vea
+
+
 
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_2)) { v, insets ->

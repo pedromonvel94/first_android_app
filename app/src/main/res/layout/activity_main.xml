@@ -15,6 +15,7 @@
 
     <!--TextView widget dentro del ViewGroup1-->
     <TextView
+        android:id="@+id/mainTextViewActivity1"
         style="@style/TextAppearance.MaterialComponents.Headline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
