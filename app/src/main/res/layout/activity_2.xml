@@ -25,6 +25,7 @@
         android:layout_gravity="center_horizontal" />
 
     <!--ViewGroup2-->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
