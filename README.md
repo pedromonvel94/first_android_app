@@ -28,7 +28,7 @@ Somos estudiantes con alta experiencia de conocimientos en la universidad digita
 3.  Sincronizar los archivos de Gradle.
 4.  Ejecutar en un emulador o dispositivo físico con Android 7.0 o superior.
 
-Este proyecto esta preparado para abrirse en Android Studio y cumple la practica de actividades Android:
+Este proyecto esta preparado para abrirse en Android Studio y cumple la pratica de actividades Android:
 
 - `MainActivity` permite escribir un mensaje.
 - El boton `Enviar` abre `Activity2`.
@@ -69,6 +69,3 @@ Este proyecto esta preparado para abrirse en Android Studio y cumple la practica
 ## Nota de verificacion
 
 El codigo fue preparado y se intento compilar con Gradle. La compilacion local se detuvo porque esta maquina no tiene Android SDK instalado. En Android Studio, el SDK se instala o configura automaticamente durante el `Gradle Sync`.
-
----
-*Este proyecto se mantiene con su código original para preservar la integridad de la entrega académica.*
