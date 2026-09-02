@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.ImageView
+import android.view.View
+import com.google.android.material.card.MaterialCardView
+import android.graphics.Color
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -24,15 +28,26 @@ class MainActivity : AppCompatActivity() {
             // Extraemos el texto que se guardó en la llave SELECCION
             val selection = result.data?.getStringExtra("SelectedOption")
 
-            //Buscar el TextView donde se muestra la elección de la pantalla 2 y se actualiza el texto
-            val mainTextViewActivity1 = findViewById<TextView>(R.id.mainTextViewActivity1)
-            if (selection?.lowercase().equals("correct")) {
-                mainTextViewActivity1.setTextColor(ContextCompat.getColor(this, R.color.green_500))
-            }else{
-                mainTextViewActivity1.setTextColor(ContextCompat.getColor(this, R.color.red))
-            }
+            // Referencias a los nuevos elementos de la tarjeta de resultado
+            val resultCard = findViewById<MaterialCardView>(R.id.resultCard)
+            val resultIcon = findViewById<ImageView>(R.id.resultIcon)
+            val resultText = findViewById<TextView>(R.id.resultText)
 
-            mainTextViewActivity1.text = "El usuario seleccionó: $selection"
+            resultCard.visibility = View.VISIBLE
+
+            if (selection?.lowercase() == "correct") {
+                resultCard.setCardBackgroundColor(ContextCompat.getColor(this, R.color.green_200))
+                resultIcon.setImageResource(R.drawable.ic_check)
+                resultIcon.setColorFilter(ContextCompat.getColor(this, R.color.green_700))
+                resultText.setTextColor(ContextCompat.getColor(this, R.color.green_700))
+                resultText.text = "Confirmación: ¡El texto es correcto!"
+            } else {
+                resultCard.setCardBackgroundColor(ContextCompat.getColor(this, R.color.red))
+                resultIcon.setImageResource(R.drawable.ic_close)
+                resultIcon.setColorFilter(Color.WHITE)
+                resultText.setTextColor(Color.WHITE)
+                resultText.text = "Confirmación: El texto es incorrecto"
+            }
         }
     }
 

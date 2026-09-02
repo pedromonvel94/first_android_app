@@ -1,71 +1,59 @@
-# S35 - Evidencia de aprendizaje 2 - Taller práctico
+# Actividad 1: Comunicación entre Actividades
 
-## Descripción del Proyecto
-Este proyecto es una aplicación Android desarrollada en Kotlin que demuestra la comunicación entre actividades mediante el uso de `Intents` y el API moderno `registerForActivityResult`. La aplicación permite al usuario navegar de una pantalla principal a una secundaria, realizar una selección y recibir dicha respuesta de vuelta en la pantalla de inicio.
+## Descripción
+Este proyecto consiste en una aplicación Android desarrollada íntegramente en **Kotlin** para la **Institución Universitaria Digital de Antioquia**. Su objetivo principal es demostrar la implementación técnica de la comunicación bidireccional entre componentes del sistema mediante el uso de `Intents` y la API moderna `ActivityResultLauncher`.
 
-## Equipo de Trabajo
-Somos estudiantes con alta experiencia de conocimientos en la universidad digital de antioquia, año 2026.
+La solución integra los principios de **Material Design 3**, priorizando una interfaz limpia, tipografía legible y una experiencia de usuario fluida y profesional.
 
-*   **Brayan Alejandro Durango Urrea**
-*   **Juan Pedro Montoya Vélez**
-*   **Víctor Manuel Quiceno Guerra**
-*   **Juan Camilo Velásquez**
+---
 
-## Características Técnicas
+## Características Principales
+*   **Interoperabilidad:** Flujo de datos robusto entre `MainActivity` y `DosActivity`.
+*   **Validación de Datos:** Control preventivo de entrada de texto.
+*   **Arquitectura Material 3:** Uso de componentes avanzados como `TextInputLayout` y `MaterialCardView`.
+*   **Feedback Dinámico:** Notificaciones visuales de estado mediante tarjetas adaptativas que cambian de color según el resultado.
+*   **Diseño Edge-to-Edge:** Adaptación nativa a las dimensiones y barras del sistema.
+
+---
+
+## Stack Tecnológico
 *   **Lenguaje:** Kotlin
-*   **Arquitectura:** Basada en Actividades (AppCompatActivity)
-*   **SDK Mínimo:** 24 (Android 7.0)
-*   **SDK Objetivo:** 37
-*   **Herramientas de UI:** XML Layouts con `LinearLayout` y `RelativeLayout`.
+*   **Framework:** Android SDK
+*   **Min SDK:** 24 (Android 7.0)
+*   **Target SDK:** 37
+*   **Componentes:** AndroidX AppCompat, Material Components.
 
-## Estructura del Código
-*   **MainActivity:** Pantalla principal que inicia la transición a la segunda pantalla y procesa el resultado devuelto.
-*   **Activity2:** Pantalla receptora donde el usuario puede elegir entre dos opciones ("Aceptar" o "Rechazar"), enviando la elección de vuelta a la actividad anterior.
+---
 
-## Instrucciones de Uso
-1.  Clonar el repositorio.
-2.  Abrir el proyecto en Android Studio.
-3.  Sincronizar los archivos de Gradle.
-4.  Ejecutar en un emulador o dispositivo físico con Android 7.0 o superior.
+## Instalación y Configuración
 
-Este proyecto esta preparado para abrirse en Android Studio y cumple la pratica de actividades Android:
+### Requisitos
+*   Android Studio Iguana o superior.
+*   Android SDK 37.
 
-- `MainActivity` permite escribir un mensaje.
-- El boton `Enviar` abre `Activity2`.
-- `Activity2` muestra el mensaje recibido.
-- El boton `Recibido` vuelve a la pantalla principal y muestra `Resultado: recibido`.
-- El boton `Cancelado` vuelve a la pantalla principal y muestra `Resultado: cancelado`.
-- Las clases principales estan en Java, como solicita la evidencia.
+### Pasos para la Ejecución
+1.  **Importar el Proyecto:** En Android Studio, seleccione `Open` y localice la carpeta `first_android_app`.
+2.  **Sincronización:** Permita que Gradle finalice el proceso de `Sync`.
+3.  **Despliegue:** Utilice el botón **Run** para instalar la aplicación en un emulador o dispositivo físico.
 
-## Como abrirlo en Android Studio
+---
 
-1. Descomprime el archivo del proyecto.
-2. Abre Android Studio.
-3. Selecciona `Open`.
-4. Busca la carpeta `first_android_app`.
-5. Espera a que Android Studio haga `Gradle Sync`.
-6. Si Android Studio pregunta por instalar Android SDK o Gradle, acepta la instalacion.
-7. Crea o abre un emulador Android.
-8. Presiona el boton verde `Run`.
+## Estructura del Proyecto
+El código se encuentra organizado de manera modular y limpia:
 
-## Archivos principales
+*   **MainActivity.kt:** Núcleo de la interacción, gestión de entrada y procesamiento de resultados devueltos por la segunda actividad.
+*   **DosActivity.kt:** Actividad encargada del procesamiento de la información y el retorno de la selección del usuario.
+*   **Recursos (XML):** Layouts optimizados siguiendo las directrices de Material Design para asegurar eficiencia y una estética profesional.
 
-- `app/src/main/java/com/example/actividad1/MainActivity.java`
-- `app/src/main/java/com/example/actividad1/Activity2.java`
-- `app/src/main/res/layout/activity_main.xml`
-- `app/src/main/res/layout/activity_2.xml`
-- `app/src/main/AndroidManifest.xml`
+---
 
-## Prueba esperada
+## Equipo de Desarrollo
+**Estudiantes - Institución Universitaria Digital de Antioquia**
 
-1. En la pantalla principal escribe: `Hola desde MainActivity`.
-2. Presiona `Enviar`.
-3. En `Activity2` debe aparecer ese mismo texto.
-4. Presiona `Recibido`.
-5. La app vuelve a la pantalla principal y muestra `Resultado: recibido`.
-6. Repite el proceso y presiona `Cancelado`.
-7. La app vuelve a la pantalla principal y muestra `Resultado: cancelado`.
+*   Brayan Alejandro Durango Urrea
+*   Juan Pedro Montoya Vélez
+*   Víctor Manuel Quiceno Guerra
+*   Juan Camilo Velásquez
 
-## Nota de verificacion
-
-El codigo fue preparado y se intento compilar con Gradle. La compilacion local se detuvo porque esta maquina no tiene Android SDK instalado. En Android Studio, el SDK se instala o configura automaticamente durante el `Gradle Sync`.
+---
+*Evidencia académica desarrollada para el fortalecimiento de competencias en ingeniería de software y desarrollo móvil.*
