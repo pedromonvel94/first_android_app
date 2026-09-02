@@ -7,68 +7,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="false"
     android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:padding="24dp"
     tools:context=".DosActivity">
 
-    <!--TextView widget inside ViewGroup1-->
-    <TextView
-        android:id="@+id/mainMessage"
-        style="@style/TextAppearance.MaterialComponents.Headline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text=""
-        android:textSize="26sp"
-        android:layout_gravity="center_horizontal" />
-
-    <!--ViewGroup2-->
-
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:clipToPadding="false">
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Confirmación"
+            app:titleCentered="true"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="?attr/colorOnPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_message"
+            app:tint="?attr/colorPrimary"
+            android:contentDescription="Icono de mensaje" />
+
+        <!--TextView widget inside ViewGroup1-->
+        <TextView
+            android:id="@+id/mainMessage"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            tools:text="Texto recibido: Ejemplo" />
 
         <TextView
             android:id="@+id/secondaryMessage"
-            style="@style/TextAppearance.MaterialComponents.Headline6"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="El texto recibido es correcto ?"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true" />
+            android:layout_marginTop="32dp"
+            android:text="¿El texto recibido es correcto?"
+            android:textAlignment="center" />
 
         <!-- Contenedor para los botones -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/secondaryMessage"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/buttonIncorrect"
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Incorrect"
-                app:backgroundTint="@color/red"/>
+                android:text="Incorrecto"
+                android:textColor="@color/red"
+                app:icon="@drawable/ic_close"
+                app:iconTint="@color/red"
+                app:rippleColor="#20DC3545"/>
 
             <Button
                 android:id="@+id/buttonCorrect"
-                android:layout_width="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="Correct"
-                app:backgroundTint="@color/green_500"/>
+                android:text="Correcto"
+                app:backgroundTint="@color/green_500"
+                app:icon="@drawable/ic_check" />
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
