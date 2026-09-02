@@ -1,59 +1,91 @@
 # Actividad 1: Comunicación entre Actividades
+### Institución Universitaria Digital de Antioquia
 
-## Descripción
-Este proyecto consiste en una aplicación Android desarrollada íntegramente en **Kotlin** para la **Institución Universitaria Digital de Antioquia**. Su objetivo principal es demostrar la implementación técnica de la comunicación bidireccional entre componentes del sistema mediante el uso de `Intents` y la API moderna `ActivityResultLauncher`.
-
-La solución integra los principios de **Material Design 3**, priorizando una interfaz limpia, tipografía legible y una experiencia de usuario fluida y profesional.
-
----
-
-## Características Principales
-*   **Interoperabilidad:** Flujo de datos robusto entre `MainActivity` y `DosActivity`.
-*   **Validación de Datos:** Control preventivo de entrada de texto.
-*   **Arquitectura Material 3:** Uso de componentes avanzados como `TextInputLayout` y `MaterialCardView`.
-*   **Feedback Dinámico:** Notificaciones visuales de estado mediante tarjetas adaptativas que cambian de color según el resultado.
-*   **Diseño Edge-to-Edge:** Adaptación nativa a las dimensiones y barras del sistema.
+<p align="left">
+  <img src="https://img.shields.io/badge/Kotlin-1.9.0-purple.svg?style=for-the-badge&logo=kotlin" alt="Kotlin">
+  <img src="https://img.shields.io/badge/Android-Target_37-green.svg?style=for-the-badge&logo=android" alt="Android">
+  <img src="https://img.shields.io/badge/Material_Design-3.0-blue.svg?style=for-the-badge&logo=materialdesign" alt="Material 3">
+</p>
 
 ---
 
-## Stack Tecnológico
-*   **Lenguaje:** Kotlin
-*   **Framework:** Android SDK
-*   **Min SDK:** 24 (Android 7.0)
-*   **Target SDK:** 37
-*   **Componentes:** AndroidX AppCompat, Material Components.
+## 📝 Descripción del Proyecto
+Esta aplicación es una implementación técnica avanzada diseñada para demostrar la **comunicación bidireccional** y el flujo de datos entre componentes de Android. Utiliza el patrón moderno de `ActivityResultLauncher` para una gestión eficiente del ciclo de vida y la integridad de los datos.
+
+La solución integra principios de **arquitectura modular** y diseño centrado en el usuario, priorizando una interfaz limpia y profesional.
 
 ---
 
-## Instalación y Configuración
-
-### Requisitos
-*   Android Studio Iguana o superior.
-*   Android SDK 37.
-
-### Pasos para la Ejecución
-1.  **Importar el Proyecto:** En Android Studio, seleccione `Open` y localice la carpeta `first_android_app`.
-2.  **Sincronización:** Permita que Gradle finalice el proceso de `Sync`.
-3.  **Despliegue:** Utilice el botón **Run** para instalar la aplicación en un emulador o dispositivo físico.
+## 🚀 Características Principales
+*   ✨ **Interoperabilidad:** Flujo de datos robusto entre `MainActivity` y `DosActivity`.
+*   🛡️ **Validación de Datos:** Control preventivo de entrada de texto para evitar errores de ejecución.
+*   🎨 **Arquitectura Material 3:** Uso de componentes avanzados como `TextInputLayout`, `MaterialCardView` y tipografía optimizada.
+*   🌈 **Feedback Dinámico:** Notificaciones visuales mediante tarjetas adaptativas que cambian de color según el resultado (Éxito/Error).
+*   📱 **Diseño Edge-to-Edge:** Adaptación nativa a las dimensiones y barras del sistema para una inmersión completa.
 
 ---
 
-## Estructura del Proyecto
-El código se encuentra organizado de manera modular y limpia:
+## 🏗️ Estructura del Proyecto
+Organización de archivos siguiendo las mejores prácticas de desarrollo Android:
 
-*   **MainActivity.kt:** Núcleo de la interacción, gestión de entrada y procesamiento de resultados devueltos por la segunda actividad.
-*   **DosActivity.kt:** Actividad encargada del procesamiento de la información y el retorno de la selección del usuario.
-*   **Recursos (XML):** Layouts optimizados siguiendo las directrices de Material Design para asegurar eficiencia y una estética profesional.
+```text
+📂 first_android_app
+├── 📂 app
+│   ├── 📂 src
+│   │   ├── 📂 main
+│   │   │   ├── 📂 java/com/example/actividad1
+│   │   │   │   ├── 📄 MainActivity.kt  # Núcleo de interacción y gestión de resultados
+│   │   │   │   └── 📄 DosActivity.kt   # Procesamiento y retorno de información
+│   │   │   ├── 📂 res
+│   │   │   │   ├── 📂 drawable         # Recursos gráficos y vectores
+│   │   │   │   ├── 📂 layout           # Definiciones de UI (activity_main, activity_2)
+│   │   │   │   └── 📂 values           # Temas, colores (M3) y strings
+│   │   │   └── 📄 AndroidManifest.xml
+│   └── 📄 build.gradle.kts
+├── 📄 build.gradle.kts
+└── 📄 settings.gradle.kts
+```
 
 ---
 
-## Equipo de Desarrollo
-**Estudiantes - Institución Universitaria Digital de Antioquia**
-
-*   Brayan Alejandro Durango Urrea
-*   Juan Pedro Montoya Vélez
-*   Víctor Manuel Quiceno Guerra
-*   Juan Camilo Velásquez
+## 🛠️ Stack Tecnológico
+| Componente | Especificación |
+| :--- | :--- |
+| **Lenguaje** | Kotlin |
+| **SDK Mínimo** | 24 (Android 7.0 Nougat) |
+| **SDK Objetivo** | 37 (Android 15) |
+| **UI Framework** | Material Components (AndroidX) |
+| **Build System** | Gradle (Kotlin DSL) |
 
 ---
-*Evidencia académica desarrollada para el fortalecimiento de competencias en ingeniería de software y desarrollo móvil.*
+
+## ⚙️ Instalación y Configuración
+
+### 1. Requisitos
+*   Android Studio **Iguana** (2023.2.1) o superior.
+*   Conexión a internet para la descarga de dependencias.
+
+### 2. Pasos para la Ejecución
+1.  **Importar:** En Android Studio, seleccione `Open` y localice la carpeta raíz del proyecto.
+2.  **Sincronizar:** Permita que Gradle finalice el proceso de `Sync`.
+3.  **Despliegue:** Utilice el botón **Run** (Play verde) para instalar la app en un emulador o dispositivo físico.
+
+---
+
+## 👥 Equipo de Desarrollo
+**Estudiantes de Ingeniería de Software - IU Digital de Antioquia**
+
+*   👤 **Brayan Alejandro Durango Urrea**
+*   👤 **Juan Pedro Montoya Vélez**
+*   👤 **Víctor Manuel Quiceno Guerra**
+*   👤 **Juan Camilo Velásquez**
+
+---
+
+> [!IMPORTANT]
+> **Nota Académica:** Este proyecto cumple con los requisitos de evidencia para el fortalecimiento de competencias en programación móvil y manejo de componentes del sistema Android.
+
+---
+<p align="center">
+  <i>Desarrollado con ❤️ por el grupo de Programación Móvil - 2026</i>
+</p>
