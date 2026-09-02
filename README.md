@@ -1,32 +1,59 @@
-# S35 - Evidencia de aprendizaje 2 - Taller práctico
+# Actividad 1: Comunicación entre Actividades
 
-## Descripción del Proyecto
-Este proyecto es una aplicación Android desarrollada en Kotlin que demuestra la comunicación entre actividades mediante el uso de `Intents` y el API moderno `registerForActivityResult`. La aplicación permite al usuario navegar de una pantalla principal a una secundaria, realizar una selección y recibir dicha respuesta de vuelta en la pantalla de inicio.
+## Descripción
+Este proyecto consiste en una aplicación Android desarrollada íntegramente en **Kotlin** para la **Institución Universitaria Digital de Antioquia**. Su objetivo principal es demostrar la implementación técnica de la comunicación bidireccional entre componentes del sistema mediante el uso de `Intents` y la API moderna `ActivityResultLauncher`.
 
-## Equipo de Trabajo
-Somos estudiantes con alta experiencia de conocimientos en la universidad digital de antioquia, año 2026.
-
-*   **Brayan Alejandro Durango Urrea**
-*   **Juan Pedro Montoya Vélez**
-*   **Víctor Manuel Quiceno Guerra**
-*   **Juan Camilo Velásquez**
-
-## Características Técnicas
-*   **Lenguaje:** Kotlin
-*   **Arquitectura:** Basada en Actividades (AppCompatActivity)
-*   **SDK Mínimo:** 24 (Android 7.0)
-*   **SDK Objetivo:** 37
-*   **Herramientas de UI:** XML Layouts con `LinearLayout` y `RelativeLayout`.
-
-## Estructura del Código
-*   **MainActivity:** Pantalla principal que inicia la transición a la segunda pantalla y procesa el resultado devuelto.
-*   **Activity2:** Pantalla receptora donde el usuario puede elegir entre dos opciones ("Aceptar" o "Rechazar"), enviando la elección de vuelta a la actividad anterior.
-
-## Instrucciones de Uso
-1.  Clonar el repositorio.
-2.  Abrir el proyecto en Android Studio.
-3.  Sincronizar los archivos de Gradle.
-4.  Ejecutar en un emulador o dispositivo físico con Android 7.0 o superior.
+La solución integra los principios de **Material Design 3**, priorizando una interfaz limpia, tipografía legible y una experiencia de usuario fluida y profesional.
 
 ---
-*Este proyecto se mantiene con su código original para preservar la integridad de la entrega académica.*
+
+## Características Principales
+*   **Interoperabilidad:** Flujo de datos robusto entre `MainActivity` y `DosActivity`.
+*   **Validación de Datos:** Control preventivo de entrada de texto.
+*   **Arquitectura Material 3:** Uso de componentes avanzados como `TextInputLayout` y `MaterialCardView`.
+*   **Feedback Dinámico:** Notificaciones visuales de estado mediante tarjetas adaptativas que cambian de color según el resultado.
+*   **Diseño Edge-to-Edge:** Adaptación nativa a las dimensiones y barras del sistema.
+
+---
+
+## Stack Tecnológico
+*   **Lenguaje:** Kotlin
+*   **Framework:** Android SDK
+*   **Min SDK:** 24 (Android 7.0)
+*   **Target SDK:** 37
+*   **Componentes:** AndroidX AppCompat, Material Components.
+
+---
+
+## Instalación y Configuración
+
+### Requisitos
+*   Android Studio Iguana o superior.
+*   Android SDK 37.
+
+### Pasos para la Ejecución
+1.  **Importar el Proyecto:** En Android Studio, seleccione `Open` y localice la carpeta `first_android_app`.
+2.  **Sincronización:** Permita que Gradle finalice el proceso de `Sync`.
+3.  **Despliegue:** Utilice el botón **Run** para instalar la aplicación en un emulador o dispositivo físico.
+
+---
+
+## Estructura del Proyecto
+El código se encuentra organizado de manera modular y limpia:
+
+*   **MainActivity.kt:** Núcleo de la interacción, gestión de entrada y procesamiento de resultados devueltos por la segunda actividad.
+*   **DosActivity.kt:** Actividad encargada del procesamiento de la información y el retorno de la selección del usuario.
+*   **Recursos (XML):** Layouts optimizados siguiendo las directrices de Material Design para asegurar eficiencia y una estética profesional.
+
+---
+
+## Equipo de Desarrollo
+**Estudiantes - Institución Universitaria Digital de Antioquia**
+
+*   Brayan Alejandro Durango Urrea
+*   Juan Pedro Montoya Vélez
+*   Víctor Manuel Quiceno Guerra
+*   Juan Camilo Velásquez
+
+---
+*Evidencia académica desarrollada para el fortalecimiento de competencias en ingeniería de software y desarrollo móvil.*
